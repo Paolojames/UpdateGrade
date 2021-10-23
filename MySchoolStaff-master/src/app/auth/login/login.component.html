@@ -1,0 +1,57 @@
+<div class="login-container">
+  <div class="login-header-container"><img class="logo" [src]="logo" /></div>
+
+  <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+    <div class="login-form-container">
+      <mat-form-field appearance="fill">
+        <mat-label>Username</mat-label>
+        <input
+          name="username"
+          matInput
+          type="text"
+          placeholder="Email or Student ID"
+          formControlName="username"
+          required
+        />
+        <mat-error
+          *ngIf="
+            usernameForm.invalid && (usernameForm.dirty || usernameForm.touched)
+          "
+        >
+          <span *ngIf="usernameForm.hasError('required')">
+            Username is required
+          </span>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Password</mat-label>
+        <input
+          name="password"
+          matInput
+          type="password"
+          placeholder="Password"
+          formControlName="password"
+          required
+        />
+        <mat-error
+          *ngIf="
+            passwordForm.invalid && (passwordForm.dirty || passwordForm.touched)
+          "
+        >
+          <span *ngIf="passwordForm.hasError('required')">
+            Password is required
+          </span>
+          <span *ngIf="passwordForm.hasError('401')">
+            Invalid username or password
+          </span>
+        </mat-error>
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit">Login</button>
+      <a [href]="registerLink" mat-button disabled="disabled">Register</a>
+    </div>
+  </form>
+
+  <div class="login-footer-container">
+    <span>&reg; ELEVATEKO Information Technology Services</span>
+  </div>
+</div>

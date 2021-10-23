@@ -1,0 +1,32 @@
+<div class="layout-container">
+  <div class="layout-toolbar">
+    <mat-toolbar>
+      <!-- <button mat-icon-button>
+    <mat-icon>menu</mat-icon>
+  </button> -->
+      <div class="brand" (click)="onBrandClick()">
+        <img [src]="logo" />
+      </div>
+      <span class="spacer"></span>
+      <button
+        mat-icon-button
+        [matMenuTriggerFor]="menu"
+        *ngIf="profile$ | async as profile"
+      >
+        <img [src]="profile.image" />
+      </button>
+      <mat-menu #menu>
+        <button mat-menu-item (click)="onChangePassword()">Change Password</button>
+        <button mat-menu-item (click)="onLogout()">Logout</button>
+      </mat-menu>
+    </mat-toolbar>
+  </div>
+
+  <div class="layout-body-container">
+    <router-outlet></router-outlet>
+  </div>
+
+  <div class="layout-footer-container">
+    <span>&reg; ELEVATEKO Information Technology Services</span>
+  </div>
+</div>

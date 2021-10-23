@@ -1,0 +1,26 @@
+<div class="profile-container" *ngIf="profile$ | async; let profile">
+  <div class="profile-header-container">
+    <div class="profile-image-wrapper">
+      <div>
+        <img [src]="uploadedFileContent || profile.image" />
+      </div>
+      <button class="upload-photo" mat-icon-button (click)="uploadFile.click()">
+        <input
+          type="file"
+          (change)="onChangeUpload($event)"
+          #uploadFile
+          accept="image/*"
+        />
+        <mat-icon>add_a_photo</mat-icon>
+      </button>
+    </div>
+    <div class="profile-name-wrapper">{{ profile.name }}</div>
+  </div>
+
+  <div class="profile-body-container">
+    <div class="call-to-action-wrapper">
+      <a mat-flat-button color="primary" disabled>Go to Classroom</a>
+      <a mat-flat-button class="updategrades" color="primary" [href]="grades">Update Grades</a>
+    </div>
+  </div>
+</div>

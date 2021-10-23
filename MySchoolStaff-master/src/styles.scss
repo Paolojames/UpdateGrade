@@ -1,0 +1,26 @@
+@use "~@angular/material" as mat;
+@include mat.core();
+
+$primary: mat.define-palette(mat.$amber-palette, 600, 100, 900);
+$secondary: mat.define-palette(mat.$green-palette, 600);
+$warn-light: mat.define-palette(mat.$red-palette);
+$warn-dark: mat.define-palette(mat.$red-palette, A700);
+$schoolko-dark-theme: mat.define-dark-theme($primary, $secondary, $warn-dark);
+$schoolko-light-theme: mat.define-light-theme($primary, $secondary, $warn-light);
+
+@include mat.core-theme($schoolko-dark-theme);
+@include mat.all-component-themes($schoolko-dark-theme);
+// @include mat.card-theme($schoolko-light-theme);
+// @include mat.menu-theme($schoolko-light-theme);
+// @include mat.form-field-theme($schoolko-light-theme);
+
+/* You can add global styles to this file, and also import other style files */
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

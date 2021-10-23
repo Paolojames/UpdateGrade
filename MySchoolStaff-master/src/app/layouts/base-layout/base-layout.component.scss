@@ -1,0 +1,81 @@
+@use "~@angular/material" as mat;
+@use "~@myschool/../src/styles" as theme;
+
+::ng-deep body {
+  //background: linear-gradient(#008241 20%, transparent 150%);
+  background: radial-gradient(at 50% 30%, #60a56d, #087137);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: mat.get-contrast-color-from-palette(theme.$secondary, 800);
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+::ng-deep .mat-menu-panel {
+  background: mat.get-color-from-palette(theme.$primary);
+
+  button.mat-menu-item {
+    color: mat.get-contrast-color-from-palette(theme.$primary, 800);
+  }
+}
+
+button {
+  text-transform: uppercase;
+}
+
+.layout-container {
+  height: 100%;
+  display: grid;
+  grid-template-rows: max-content auto 40px;
+  grid-template-columns: 100%;
+  justify-items: center;
+
+  .layout-toolbar {
+    justify-self: stretch;
+    z-index: 1000;
+    position: sticky;
+    top: 0;
+
+    mat-toolbar {
+      font-weight: 200;
+
+      button {
+        text-transform: uppercase;
+        font-weight: 200;
+
+        img {
+          object-fit: cover;
+          border-radius: 50%;
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .greetings-container {
+        font-size: medium;
+      }
+
+      .brand {
+        height: inherit;
+
+        img {
+          margin: 10px 0;
+          height: 70%;
+        }
+      }
+    }
+  }
+
+  .layout-body-container {
+    width: 100%;
+  }
+
+  .layout-footer-container {
+    display: grid;
+    align-content: center;
+    font-weight: 200;
+    font-size: smaller;
+  }
+}

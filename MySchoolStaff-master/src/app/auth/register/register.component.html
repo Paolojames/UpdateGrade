@@ -1,0 +1,32 @@
+<div class="register-container">
+  <div class="register-header-container"><img class="logo" src="assets/logo.png" /></div>
+
+  <div class="register-form-container">
+    <mat-form-field appearance="fill">
+      <mat-label>School ID</mat-label>
+      <input matInput type="text" placeholder="School ID Number">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>School</mat-label>
+      <mat-select [(value)]="selectedSchool">
+        <mat-option *ngFor="let school of schools" [value]="school.id">{{ school.name }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Password</mat-label>
+      <input matInput [type]="hidePassword ? 'password': 'text'" placeholder="Password">
+      <button mat-icon-button matSuffix (click)="hidePassword = !hidePassword">
+        <mat-icon>{{ hidePassword ? 'visibility_off' : 'visibility' }}</mat-icon>
+      </button>
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="onRegister()">REGISTER</button>
+
+    <div class="login-link-container">
+      <a [href]="login" mat-button>Already have an account?</a>
+    </div>
+  </div>
+
+  <div class="register-footer-container">
+    <span>&reg; ELEVATEKO Information Technology Services</span>
+  </div>
+</div>

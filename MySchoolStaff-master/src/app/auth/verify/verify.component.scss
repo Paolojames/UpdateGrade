@@ -1,0 +1,69 @@
+@use "~@angular/material" as mat;
+@use "~@myschool/../src/styles" as theme;
+
+.verify-container {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 25vmax auto 40px;
+  justify-items: center;
+
+  .verify-header-container {
+    margin: -30px 0 -40px 0;
+
+    img.logo {
+      height: 100%;
+    }
+  }
+
+  .verify-form-container {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    align-content: start;
+
+    mat-form-field {
+      width: 100%;
+    }
+
+    input[type="number"] {
+      font-size: 30px;
+      text-align: center;
+
+      &::placeholder {
+        font-size: medium;
+      }
+    }
+
+    button {
+      justify-self: stretch;
+      padding: 5px 0;
+    }
+
+    .register-link-container {
+      margin: 10px 0;
+      justify-self: stretch;
+
+      a {
+        width: 100%;
+      }
+    }
+  }
+
+  .verify-footer-container {
+    display: grid;
+    align-items: center;
+    font-weight: 200;
+    font-size: smaller;
+  }
+}
+
+::ng-deep .verification-snack-bar {
+  background: rgba(51, 51, 51, 0.8);
+  color: mat.get-contrast-color-from-palette(theme.$secondary, 800);
+
+  button {
+    background: mat.get-color-from-palette(theme.$primary);
+    color: mat.get-contrast-color-from-palette(theme.$primary, 800);
+  }
+}
