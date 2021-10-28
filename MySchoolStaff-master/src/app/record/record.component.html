@@ -1,0 +1,114 @@
+<div class="profile-container">
+    <div class="profile-header-container">
+     <p></p> 
+     
+     <mat-icon class="arrow" routerLink="/grades">arrow_back</mat-icon>
+        <div class="subject">
+          
+            <br>
+            <h2>James Paolo Lacaden</h2>
+            <hr>
+        </div>
+            <br>
+            <!-- <a mat-flat-button class="Download" color="primary">Download ECR</a>  -->
+                
+            <h1 class="g">Quarter 1 Electronic 
+            Class Record</h1>
+          
+            <!-- <a mat-flat-button class="Download" color="primary">Download ECR</a>  -->
+            <hr>
+            
+            <mat-accordion>
+              <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                  <mat-panel-title >
+                   <h4>Written Works:</h4> 
+                   
+                  </mat-panel-title>
+                  <mat-panel-description>
+                    <h5 class="h55"> 100%</h5>
+                   
+                  </mat-panel-description>
+                </mat-expansion-panel-header>
+               <p> Weighted Score: 30% <br><br>
+                    # Highest Possible Score 
+               </p>
+               <p class="PossibleScore"> Score </p>
+               <p class="Percent"> % </p>
+               <p class="one">1<input type="number" class="number">
+                <input type="number" class="Scores"></p>
+            
+                <p class="one">2<input type="number" class="number">
+                 <input type="number" class="Scores"></p>
+                  
+                 <p class="one">3<input type="number" class="number">
+                  <input type="number" class="Scores"></p>
+            
+                <p>  <mat-icon class="add" style="color:  white;">add</mat-icon>
+                  <a mat-flat-button class="updategrades" color="primary" >Save</a>
+                </p>    
+                
+              </mat-expansion-panel>
+              <mat-expansion-panel (opened)="panelOpenState = true"
+                                   (closed)="panelOpenState = false">
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                   <h4>Performance Task:</h4> 
+                  </mat-panel-title>
+                  <mat-panel-description>
+                    <h5 class="h5"> 100%</h5>
+                  </mat-panel-description>
+                </mat-expansion-panel-header>
+                
+                <p> Weighted Score: 50% <br><br>
+                  # Highest Possible Score 
+             </p>
+             
+             <p class="PossibleScore"> Score </p>
+             <p class="Percent"> % </p>
+             <p class="one">1<input type="number" class="number">
+              <input type="number" class="Scores"></p>
+            
+             <p class="one">2<input type="number" class="number">
+              <input type="number" class="Scores">
+              </p>
+
+              <p>  <mat-icon style="color:  white;">add</mat-icon>
+                <a mat-flat-button class="updategrades" color="primary" >Save</a>
+              </p>    
+            
+              </mat-expansion-panel>
+            </mat-accordion>
+            
+            <mat-accordion>
+              <mat-expansion-panel >
+                <mat-expansion-panel-header>
+                  <mat-panel-title >
+                   <h4 class="hsss">Quarterly Assessment:</h4> 
+                   
+                  </mat-panel-title>
+                  <mat-panel-description>
+                    <h5 class="hs"> 100%</h5>
+                   
+                  </mat-panel-description>
+                </mat-expansion-panel-header>
+                <p> Weighted Score: 20% <br><br>
+                  # Highest Possible Score 
+             </p>
+             
+             <p class="PossibleScore"> Score </p>
+             <p class="Percent"> % </p>
+             <p class="one">1<input type="number" class="number">
+              <input type="number" class="Scores"></p>
+            
+              <p>  <mat-icon style="color:  white;">add</mat-icon>
+                <a mat-flat-button class="updategrades" color="primary" >Save</a>
+              </p>    
+                         
+              </mat-expansion-panel>
+              <mat-expansion-panel (opened)="panelOpenState = true"
+                                   (closed)="panelOpenState = false">
+                  
+              </mat-expansion-panel>
+            </mat-accordion>
+      

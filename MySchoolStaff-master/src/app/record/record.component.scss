@@ -13,6 +13,13 @@
   
   
   }
+
+  .add{
+      margin-top: -50px;
+  }
+  .Weighted{
+      font-style: italic;
+  }
     .h{
       width: 100%;
       padding: 30px;
@@ -42,7 +49,7 @@
     }
   
     h2{
-        font-size: 35px;
+        font-size: 30px;
         text-shadow:  1px 1px black;
         margin-left: 12px;
         
@@ -54,26 +61,39 @@
       }
 
       .h5{
-          font-size: 18px;
-          margin-left: 50px;
+          font-size: 20px;
+          margin-left: 25px;
           text-align:right;
           margin-top: 2px;
-          text-align: center;
       }
 
-      .hs{
-        font-size: 18px;
-        margin-left: 30px;
+      .h55{
+        font-size: 20px;
+        margin-left: 60px;
         text-align:right;
         margin-top: 2px;
     }
+
+      .hs{
+        font-size: 20px;
+        margin-left: 15px;
+        text-align:right;
+        margin-top: 2px;
+      }
+    
 
     .hss{
         font-size: 18px;
         margin-left: 170px;
         text-align:right;
-        margin-top: 2px;
-        text-align: center;
+        margin-top: 10px;
+    }
+
+    .hsss{
+        font-size: 18px;
+        // margin-left: 170px;
+        text-align:right;
+        margin-top: 4px;
     }
       
       .h6{
@@ -89,13 +109,6 @@
        
     }
 
-    .editt{
-        margin-left: 215px;
-        margin-top: -20%;
-        
-     }
- 
-
     .Download{
         margin-left: 220px;
         margin-top: -100%;
@@ -103,6 +116,7 @@
      }
 
       .p{
+          
           margin-left: 170px;
           margin-top: -65px;
       }
@@ -120,8 +134,8 @@
     }
 
     .g{
-        margin-top: -35px;
-        font-size: 30px;
+        margin-top: -20px;
+        font-size: 23px;
         border-radius: 50%;
         margin-left: 10px;
     }
@@ -129,7 +143,6 @@
         margin-top: -48px;
         font-size: 20px;
         margin-left: 160px;
-        
     }
 
     .border{
@@ -166,10 +179,41 @@
     .Score{
         margin-top: -45px;
         margin-left: 250px;
-        
     }
 
     .table{
         color: black;
     }
-  
+
+    .PossibleScore{
+        margin-left: 180px;
+        margin-top: -65px;
+        
+    }
+
+
+    .Percent{
+        margin-left: 240px;
+        margin-top: -65px;
+    }
+    
+    .one{
+        margin-top: -25px;
+    
+    }
+
+    .number{
+        margin-left: 2px;
+        width: 50%;
+        margin-top: -100px;
+    }
+    
+    .Scores{
+        margin-left: 20px;
+        width: 15%;
+        margin-top: -50px;
+    }
+    
+    .updategrades{
+      margin-left: 30px;
+    }

@@ -7,6 +7,7 @@ import { RegisterComponent } from './register/register.component';
 import { VerifyComponent } from './verify/verify.component';
 import { GradesComponent } from '@myschool/grades/grades.component';
 import { EnglishComponent } from '@myschool/english/english.component';
+import { RecordComponent } from '@myschool/record/record.component';
 
 const routes: Routes = [
   {
@@ -30,9 +31,15 @@ const routes: Routes = [
         component: GradesComponent,
       },
       
+      
       {
         path: 'english',
         component: EnglishComponent,
+      },
+
+      {
+        path: 'record',
+        component: RecordComponent
       },
 
       {

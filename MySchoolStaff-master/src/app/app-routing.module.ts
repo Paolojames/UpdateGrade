@@ -35,7 +35,22 @@ const routes: Routes = [
       {
         path: '',
         loadChildren: () => import('@myschool/grades/grades.module').then(m => m.GradesModule),
+      },
+
+      
+      //English Module
+      {
+        path: '',
+        loadChildren: () => import('@myschool/english/english.module').then(m => m.EnglishModule),
+      },
+
+      //Record Module
+      {
+        path: '',
+        loadChildren: () => import('@myschool/record/record.module').then(m => m.RecordModule),
       }
+      
+
       
 
     ]

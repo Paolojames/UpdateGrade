@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./grades.component.scss']
 })
 export class GradesComponent implements OnInit {
-
+  panelOpenState = false;
   constructor() { }
 
   ngOnInit(): void {

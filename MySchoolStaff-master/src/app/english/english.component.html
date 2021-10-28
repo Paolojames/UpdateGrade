@@ -1,94 +1,153 @@
 <div class="profile-container">
     <div class="profile-header-container">
-        <mat-tab-group>
-            <mat-tab label="First"> Content 1 </mat-tab>
-            <mat-tab label="Second"> Content 2 </mat-tab>
-            <mat-tab label="Third"> Content 3 </mat-tab>
-          </mat-tab-group>
-  
      <p></p> 
+     
+     <mat-icon class="arrow" routerLink="/grades">arrow_back</mat-icon>
         <div class="subject">
+          
             <br>
             <h2>English Class</h2>
             <hr>
-        </div>  
-            <h1>Grades</h1>
+        </div>
+            <br>
+            <a mat-flat-button class="Download" color="primary">Download ECR</a> 
+                
+            <h2 class="g">Grades</h2>
+          
+            <!-- <a mat-flat-button class="Download" color="primary">Download ECR</a>  -->
             <hr>
             
-    
-        <div class ="table">
-        <table>
-            <tr> 
-                
-                <th *ngFor ="let column of headers"> 
-                    {{column}}
-                    
-                </th>
-                
-            </tr>
-
-            <tr *ngFor =" let row of rows">
-                <td *ngFor ="let column of headers">
-                    {{row[column]}}
-
-                </td>
-             </tr>
-
-        </table>
-        <h3>ID</h3> <h3 class="Name">Name</h3> <h3 class="Score">Grades</h3>
-        <hr>
-        <h3>1</h3> <h3 class="Names"></h3>
-        <hr>
-
-            <h3>2</h3>  <h3 class="Names"></h3>
-            
-            <hr>
-                <h3>3</h3>
+            <mat-accordion>
+              <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                  <mat-panel-title >
+                   <h4> 1. James Paolo</h4> 
+                   
+                  </mat-panel-title>
+                  <mat-panel-description>
+                    <h5 class="h5"> 98 %</h5>
+                   
+                  </mat-panel-description>
+                </mat-expansion-panel-header>
                 <hr>
-                    <h3>4</h3>
-                    <hr>
-                        <h3>5</h3>
-                        <hr>
-                         <h3>6</h3>
-                            <hr>
-                                <h3>7</h3>
-                                <hr>
-                                    <h3>8</h3>
-                                     <hr>
-                                         <h3>9</h3>
-                                         <hr>
-                                             <h3>10</h3>
-                                             <hr>
-                                             <h3>11</h3>
-                                             <hr>
-                                                 <h3>12</h3>
-                                                 <hr>
-                                                     <h3>13</h3>
-                                                     <hr>
-                                                         <h3>14</h3>
-                                                         <hr>
-                                                             <h3>15</h3>
-                                                             <hr>
-                                                                 <h3>16</h3>
-                                                                 <hr>
-                                                                     <h3>17</h3>
-                                                                     <hr>
-                                                                         <h3>18</h3>
-                                                                         <hr>
-                                                                             <h3>19</h3>
-                                                                             <hr>
-                                                                                                                                                    
+                <br>
+                <a mat-flat-button class="edit" color="primary" routerLink="/record">Edit</a> 
+                
+                <h1 class="quarter1">1st Quarter</h1><h1 class="Scores">98%</h1> 
+                 <hr><br>
+                 <a mat-flat-button class="edit" color="primary">Edit</a> 
 
-    </div>
-    
-  
+                 <h1 class="quarter1">2nd Quarter</h1><h1 class="Scores">0%</h1>
+                  
+                  <hr><br>
+                 <a mat-flat-button class="edit" color="primary">Edit</a> 
+
+                 <h1 class="quarter1">3rd Quarter </h1><h1 class="Scores">0%</h1>
+                  
+                  <hr><br>
+                 <a mat-flat-button class="edit" color="primary">Edit</a> 
+
+                 <h1 class="quarter1">4th Quarter </h1><h1 class="Scores">0%</h1>
+                  <hr>
+              </mat-expansion-panel>
+              <mat-expansion-panel (opened)="panelOpenState = true"
+                                   (closed)="panelOpenState = false">
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                   <h4> 2. Carlo Banez</h4> 
+                  </mat-panel-title>
+                  <mat-panel-description>
+                    <h5 class="h5"> 100%</h5>
+                  </mat-panel-description>
+                </mat-expansion-panel-header>
+                <hr>
+                <br>
+                <a mat-flat-button class="edit" color="primary">Edit</a> 
+                
+                <h1 class="quarter1">1st Quarter</h1><h1 class="Scores">100%</h1> 
+                 <hr><br>
+                 <a mat-flat-button class="edit" color="primary">Edit</a> 
+
+                 <h1 class="quarter1">2nd Quarter</h1><h1 class="Scores">0%</h1>
+                  
+                  <hr><br>
+                 <a mat-flat-button class="edit" color="primary">Edit</a> 
+
+                 <h1 class="quarter1">3rd Quarter </h1><h1 class="Scores">0%</h1>
+                  
+                  <hr><br>
+                 <a mat-flat-button class="edit" color="primary">Edit</a> 
+
+                 <h1 class="quarter1">4th Quarter </h1><h1 class="Scores">0%</h1>
+                  <hr>
+              </mat-expansion-panel>
+            </mat-accordion
+            >
+            <mat-accordion>
+              <mat-expansion-panel >
+                <mat-expansion-panel-header>
+                  <mat-panel-title >
+                   <h4> 3.Julius Masigan</h4> 
+                   
+                  </mat-panel-title>
+                  <mat-panel-description>
+                    <h5 class="hs"> 100 %</h5>
+                   
+                  </mat-panel-description>
+                </mat-expansion-panel-header>
+                <hr>
+                <br>
+                <a mat-flat-button class="edit" color="primary">Edit</a> 
+                
+                <h1 class="quarter1">1st Quarter</h1><h1 class="Scores">100%</h1> 
+                 <hr><br>
+                 <a mat-flat-button class="edit" color="primary">Edit</a> 
+
+                 <h1 class="quarter1">2nd Quarter</h1><h1 class="Scores">0%</h1>
+                  
+                  <hr><br>
+                 <a mat-flat-button class="edit" color="primary">Edit</a> 
+
+                 <h1 class="quarter1">3rd Quarter </h1><h1 class="Scores">0%</h1>
+                  
+                  <hr><br>
+                 <a mat-flat-button class="edit" color="primary">Edit</a> 
+
+                 <h1 class="quarter1">4th Quarter </h1><h1 class="Scores">0%</h1>
+                  <hr>
+              </mat-expansion-panel>
+              <mat-expansion-panel (opened)="panelOpenState = true"
+                                   (closed)="panelOpenState = false">
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                   <h4> 4.</h4> 
+                  </mat-panel-title>
+                  <mat-panel-description>
+                    <h5 class="hss"> 100%</h5>
+                  </mat-panel-description>
+                </mat-expansion-panel-header>
+                <hr>
+                <br>
+                <a mat-flat-button class="edit" color="primary">Edit</a> 
+                
+                <h1 class="quarter1">1st Quarter</h1><h1 class="Scores">0%</h1> 
+                 <hr><br>
+                 <a mat-flat-button class="edit" color="primary">Edit</a> 
+
+                 <h1 class="quarter1">2nd Quarter</h1><h1 class="Scores">0%</h1>
+                  
+                  <hr><br>
+                 <a mat-flat-button class="edit" color="primary">Edit</a> 
+
+                 <h1 class="quarter1">3rd Quarter </h1><h1 class="Scores">0%</h1>
+                  
+                  <hr><br>
+                 <a mat-flat-button class="edit" color="primary">Edit</a> 
+
+                 <h1 class="quarter1">4th Quarter </h1><h1 class="Scores">0%</h1>
+                  <hr>
+
+                  
+              </mat-expansion-panel>
+            </mat-accordion>
       
-      <!-- <a mat-flat-button class="h" color="black" ></a>
-   <br><br>
-  <button mat-raised-button class="english" color="primary" routerLink="/english" >English</button>
-  <button mat-raised-button class="next" color="primary" routerLink="/" >Filipino</button>
-  <button mat-raised-button class="next" color="primary" routerLink="/" >Science</button>
-  <button mat-raised-button class="next" color="primary" routerLink="/" >Math</button>
-  <button mat-raised-button class="next" color="primary" routerLink="/" >Araling Panlipunan</button>
-   -->
-  
